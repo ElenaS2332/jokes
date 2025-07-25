@@ -1,0 +1,11 @@
+stages:
+  - stage: Build
+    pool:
+      vmImage: "ubuntu-latest"
+    jobs:
+      - job: Build
+        displayName: BuildApp
+        steps:
+          - task: DotNetCoreCLI@2
+            inputs:
+              command: 'build'
